@@ -17,10 +17,10 @@ export function MarketingNavbar() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-white/80 backdrop-blur-md">
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
-        <Link href="/" className="flex items-center gap-2 font-bold text-xl">
-          <Calendar className="h-6 w-6 text-primary" />
-          <span>BookFlow</span>
+      <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-4 sm:h-16 sm:px-6">
+        <Link href="/" className="flex items-center gap-2 font-bold text-base sm:text-xl">
+          <Calendar className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
+          <span className="hidden sm:inline">BookFlow</span>
         </Link>
 
         {/* Desktop nav */}
@@ -50,28 +50,28 @@ export function MarketingNavbar() {
           <SheetTrigger render={<Button variant="ghost" size="icon" />} className="md:hidden">
             <Menu className="h-5 w-5" />
           </SheetTrigger>
-          <SheetContent side="right" className="w-72">
-            <SheetTitle className="flex items-center gap-2 font-bold text-lg">
+          <SheetContent side="right" className="w-48 p-4">
+            <SheetTitle className="flex items-center gap-2 font-bold text-base">
               <Calendar className="h-5 w-5 text-primary" />
               BookFlow
             </SheetTitle>
-            <nav className="mt-8 flex flex-col gap-4">
+            <nav className="mt-6 flex flex-col gap-2">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="text-base font-medium text-muted-foreground transition-colors hover:text-foreground"
+                  className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
                 >
                   {link.label}
                 </Link>
               ))}
-              <div className="mt-4 flex flex-col gap-3">
-                <Button variant="outline" nativeButton={false} render={<Link href="/login" onClick={() => setOpen(false)} />}>
+              <div className="mt-4 flex flex-col gap-2">
+                <Button size="sm" variant="outline" className="w-24" nativeButton={false} render={<Link href="/login" onClick={() => setOpen(false)} />}>
                   Accedi
                 </Button>
-                <Button nativeButton={false} render={<Link href="/signup" onClick={() => setOpen(false)} />}>
-                  Inizia Gratis
+                <Button size="sm" className="w-24" nativeButton={false} render={<Link href="/signup" onClick={() => setOpen(false)} />}>
+                  Inizia
                 </Button>
               </div>
             </nav>

@@ -24,26 +24,28 @@ export default function LandingPage() {
       {/* Hero */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(45%_40%_at_50%_60%,rgba(0,0,0,0.04),transparent)]" />
-        <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-28 lg:py-36">
+        <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-28 lg:py-36">
           <div className="mx-auto max-w-3xl text-center">
-            <div className="mb-6 inline-flex items-center rounded-full border bg-muted/50 px-4 py-1.5 text-sm font-medium text-muted-foreground">
-              <Calendar className="mr-2 h-4 w-4" />
-              Gestione appuntamenti per piccole attività
+            <div className="mb-6 flex justify-center">
+              <div className="inline-flex items-center rounded-full border bg-muted/50 px-3 py-1 text-xs sm:px-4 sm:py-1.5 sm:text-sm font-medium text-muted-foreground">
+                <Calendar className="mr-2 h-3 w-3 sm:h-4 sm:w-4" />
+                Gestione appuntamenti per piccole attività
+              </div>
             </div>
-            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
+            <h1 className="text-2xl font-bold tracking-tight sm:text-4xl sm:leading-tight lg:text-6xl">
               Riduci gli appuntamenti mancati.{" "}
               <span className="text-muted-foreground">Gestisci tutto in un posto.</span>
             </h1>
-            <p className="mt-6 text-lg text-muted-foreground sm:text-xl">
+            <p className="mt-4 text-sm text-muted-foreground sm:mt-6 sm:text-lg lg:text-xl">
               BookFlow aiuta barbieri, saloni, dentisti e piccole attività a gestire le
               prenotazioni, inviare promemoria e ridurre i no-show — senza complicazioni.
             </p>
-            <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-              <Button size="lg" className="w-full sm:w-auto" nativeButton={false} render={<Link href="/signup" />}>
+            <div className="mt-8 flex flex-col items-center gap-3 sm:gap-4 sm:mt-10 sm:flex-row sm:justify-center">
+              <Button size="sm" className="w-full sm:w-auto sm:size-lg" nativeButton={false} render={<Link href="/signup" />}>
                 Inizia Gratis
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
-              <Button size="lg" variant="outline" className="w-full sm:w-auto" nativeButton={false} render={<Link href="#features" />}>
+              <Button size="sm" variant="outline" className="w-full sm:w-auto sm:size-lg" nativeButton={false} render={<Link href="#features" />}>
                 Scopri di più
               </Button>
             </div>
@@ -52,18 +54,18 @@ export default function LandingPage() {
       </section>
 
       {/* Features */}
-      <section id="features" className="border-t bg-muted/20 py-20 sm:py-28">
+      <section id="features" className="border-t bg-muted/20 py-16 sm:py-20 lg:py-28">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+            <h2 className="text-2xl font-bold tracking-tight sm:text-3xl lg:text-4xl">
               Tutto ciò che serve per gestire gli appuntamenti
             </h2>
-            <p className="mt-4 text-lg text-muted-foreground">
+            <p className="mt-3 text-sm text-muted-foreground sm:mt-4 sm:text-base lg:text-lg">
               Semplice, veloce, progettato per chi lavora davvero.
             </p>
           </div>
 
-          <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-12 grid gap-6 sm:gap-8 sm:grid-cols-2 lg:mt-16 lg:grid-cols-3">
             {[
               {
                 icon: Calendar,
@@ -118,18 +120,18 @@ export default function LandingPage() {
       </section>
 
       {/* How it works */}
-      <section id="how-it-works" className="py-20 sm:py-28">
+      <section id="how-it-works" className="py-16 sm:py-20 lg:py-28">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+            <h2 className="text-2xl font-bold tracking-tight sm:text-3xl lg:text-4xl">
               Come funziona
             </h2>
-            <p className="mt-4 text-lg text-muted-foreground">
+            <p className="mt-3 text-sm text-muted-foreground sm:mt-4 sm:text-base lg:text-lg">
               Inizia in meno di 2 minuti. Nessuna carta di credito richiesta.
             </p>
           </div>
 
-          <div className="mt-16 grid gap-8 sm:grid-cols-3">
+          <div className="mt-12 grid gap-6 sm:gap-8 sm:grid-cols-3 lg:mt-16">
             {[
               {
                 step: "01",
@@ -162,18 +164,18 @@ export default function LandingPage() {
       </section>
 
       {/* Pricing preview */}
-      <section className="border-t bg-muted/20 py-20 sm:py-28">
+      <section className="border-t bg-muted/20 py-16 sm:py-20 lg:py-28">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+            <h2 className="text-2xl font-bold tracking-tight sm:text-3xl lg:text-4xl">
               Prezzi semplici e trasparenti
             </h2>
-            <p className="mt-4 text-lg text-muted-foreground">
+            <p className="mt-3 text-sm text-muted-foreground sm:mt-4 sm:text-base lg:text-lg">
               Scegli il piano giusto per la tua attività.
             </p>
           </div>
 
-          <div className="mt-16 grid gap-8 sm:grid-cols-3">
+          <div className="mt-12 grid gap-6 sm:gap-8 sm:grid-cols-2 lg:mt-16 lg:grid-cols-3">
             {[
               {
                 name: "Starter",
@@ -222,7 +224,7 @@ export default function LandingPage() {
             ].map((plan) => (
               <div
                 key={plan.name}
-                className={`rounded-2xl border p-8 ${
+                className={`rounded-2xl border p-6 sm:p-8 ${
                   plan.highlight
                     ? "border-primary bg-card shadow-lg ring-1 ring-primary/20"
                     : "bg-card shadow-sm"
@@ -233,22 +235,23 @@ export default function LandingPage() {
                     Più Popolare
                   </span>
                 )}
-                <h3 className="text-lg font-semibold">{plan.name}</h3>
-                <p className="mt-1 text-sm text-muted-foreground">{plan.description}</p>
+                <h3 className="text-base sm:text-lg font-semibold">{plan.name}</h3>
+                <p className="mt-1 text-xs sm:text-sm text-muted-foreground">{plan.description}</p>
                 <div className="mt-4">
-                  <span className="text-4xl font-bold">{plan.price}</span>
-                  <span className="text-muted-foreground">{plan.period}</span>
+                  <span className="text-3xl sm:text-4xl font-bold">{plan.price}</span>
+                  <span className="text-sm text-muted-foreground">{plan.period}</span>
                 </div>
-                <ul className="mt-6 space-y-3">
+                <ul className="mt-6 space-y-2 sm:space-y-3">
                   {plan.features.map((f) => (
-                    <li key={f} className="flex items-start gap-2 text-sm">
+                    <li key={f} className="flex items-start gap-2 text-xs sm:text-sm">
                       <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
-                      {f}
+                      <span>{f}</span>
                     </li>
                   ))}
                 </ul>
                 <Button
-                  className="mt-8 w-full"
+                  size="sm"
+                  className="mt-6 sm:mt-8 w-full"
                   variant={plan.highlight ? "default" : "outline"}
                   nativeButton={false}
                   render={<Link href="/signup" />}
@@ -262,16 +265,16 @@ export default function LandingPage() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-20 sm:py-28">
+      <section className="py-16 sm:py-20 lg:py-28">
         <div className="mx-auto max-w-3xl px-4 text-center sm:px-6">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+          <h2 className="text-2xl font-bold tracking-tight sm:text-3xl lg:text-4xl">
             Pronto a ridurre i no-show?
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground">
+          <p className="mt-3 text-sm text-muted-foreground sm:mt-4 sm:text-base lg:text-lg">
             Unisciti a centinaia di attività che già usano BookFlow per gestire i propri
             appuntamenti.
           </p>
-          <Button size="lg" className="mt-8" nativeButton={false} render={<Link href="/signup" />}>
+          <Button size="sm" className="mt-6 sm:mt-8 sm:size-lg" nativeButton={false} render={<Link href="/signup" />}>
             Inizia Gratis Ora
             <ArrowRight className="ml-2 h-4 w-4" />
           </Button>
