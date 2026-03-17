@@ -47,7 +47,7 @@ export function MobileNav({ businessName }: MobileNavProps) {
       <SheetContent side="left" className="w-52 p-3">
         <div className="flex h-full flex-col">
           {/* Header */}
-          <div className="flex h-10 items-center gap-2 border-b pb-2">
+          <div className="flex h-10 items-end gap-2 border-b pb-2">
             <CalendarIcon className="h-5 w-5 text-primary" />
             <SheetTitle className="font-bold text-sm">BookFlow</SheetTitle>
           </div>
