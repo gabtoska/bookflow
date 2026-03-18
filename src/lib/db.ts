@@ -13,4 +13,4 @@ export const db =
     adapter: new PrismaPg({ connectionString }),
   });
 
-if (process.env.NODE_ENV !== "production") globalForPrisma.prisma = db;
+if (!globalForPrisma.prisma) globalForPrisma.prisma = db;
