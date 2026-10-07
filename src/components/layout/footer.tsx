@@ -1,46 +1,44 @@
 import Link from "next/link";
-import { Calendar } from "lucide-react";
+import { ArrowUpRight, CalendarDays } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="border-t bg-muted/30">
-      <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+    <footer className="bg-[#1f211d] text-[#f7f4ed]">
+      <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
+        <div className="grid gap-12 border-b border-white/15 pb-12 lg:grid-cols-[1.3fr_0.7fr_0.7fr]">
           <div>
-            <Link href="/" className="flex items-center gap-2 font-bold text-lg">
-              <Calendar className="h-5 w-5 text-primary" />
+            <Link href="/" className="inline-flex items-center gap-2.5 text-xl font-extrabold">
+              <span className="flex size-9 items-center justify-center rounded-xl bg-[#e7592b]">
+                <CalendarDays className="size-4" />
+              </span>
               BookFlow
             </Link>
-            <p className="mt-3 text-sm text-muted-foreground">
-              Gestione appuntamenti semplice per piccole attività.
+            <p className="mt-5 max-w-sm font-serif text-2xl leading-tight text-[#d5d2c9]">
+              Un’agenda più calma per giornate che non lo sono sempre.
             </p>
           </div>
+
           <div>
-            <h4 className="mb-3 text-sm font-semibold">Prodotto</h4>
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><Link href="/#features" className="hover:text-foreground">Funzionalità</Link></li>
-              <li><Link href="/pricing" className="hover:text-foreground">Prezzi</Link></li>
-              <li><Link href="/#how-it-works" className="hover:text-foreground">Come Funziona</Link></li>
-            </ul>
+            <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#8f9288]">Esplora</p>
+            <nav className="mt-5 flex flex-col gap-3 text-sm">
+              <Link href="/#prodotto" className="hover:text-[#f4cf58]">Il prodotto</Link>
+              <Link href="/#come-funziona" className="hover:text-[#f4cf58]">Come funziona</Link>
+              <Link href="/pricing" className="hover:text-[#f4cf58]">Prezzi</Link>
+            </nav>
           </div>
+
           <div>
-            <h4 className="mb-3 text-sm font-semibold">Azienda</h4>
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><span className="cursor-default">Chi Siamo</span></li>
-              <li><span className="cursor-default">Contatti</span></li>
-              <li><span className="cursor-default">Blog</span></li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="mb-3 text-sm font-semibold">Legale</h4>
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><span className="cursor-default">Privacy Policy</span></li>
-              <li><span className="cursor-default">Termini di Servizio</span></li>
-            </ul>
+            <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#8f9288]">Parliamone</p>
+            <a href="mailto:info@bookflow.it" className="mt-5 inline-flex items-center gap-2 border-b border-white/30 pb-1 text-sm hover:text-[#f4cf58]">
+              info@bookflow.it
+              <ArrowUpRight className="size-3.5" />
+            </a>
           </div>
         </div>
-        <div className="mt-10 border-t pt-6 text-center text-sm text-muted-foreground">
-          &copy; {new Date().getFullYear()} BookFlow. Tutti i diritti riservati.
+
+        <div className="flex flex-col gap-3 pt-6 text-xs text-[#8f9288] sm:flex-row sm:items-center sm:justify-between">
+          <p>&copy; {new Date().getFullYear()} BookFlow.</p>
+          <p>Prenotazioni semplici, tempo ben speso.</p>
         </div>
       </div>
     </footer>
